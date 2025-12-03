@@ -1,91 +1,84 @@
-## Flight Status Dashboard
+## Flight Status & Delay Analysis Dashboard
 
-An interactive Power BI dashboard to monitor and analyze flight status information, including on‑time performance, delays, and cancellations. This project is intended as a portfolio‑ready example to showcase data visualization and reporting skills using Microsoft Power BI.
+Power BI • SQL • Data Modeling • DAX • ETL • Visualization
 
-### Project Overview
+This repository contains a **clean, demo-ready** version of the Flight Status project — with small sample data and the dashboard assets.  
+The full dataset and Power BI file are large and available for download via Google Drive.
 
-- **File**: `Flight Status Dashboard.pbix`
-- **Tool**: Microsoft Power BI Desktop
-- **Goal**: Provide a quick, visual summary of flight operations so users can identify trends, problem routes, and peak delay periods.
+---
 
-### Key Features
+### 🔎 Project Summary
 
-- **Overall KPIs**: Total flights, on‑time flights, delayed flights, and cancellation counts/percentages.
-- **Delay Analysis**: Breakdown of delays by airline, route, and time period.
-- **Route Performance**: Comparison of on‑time performance across routes and destinations.
-- **Time Trends**: Daily/weekly/monthly views to spot patterns over time.
-- **Interactive Filters**: Slicers for date ranges, airlines, routes, and other key dimensions.
+A complete BI solution to analyze flight delays, cancellations, airline performance, and airport traffic.  
+Key components:
 
-> Note: The exact visuals and filters may vary depending on the dataset and any customizations you make.
+- **Data modeling** (star schema)
+- **DAX measures** for KPIs
+- **Time-series and aggregate analysis**
+- **Power BI dashboard** with interactive filters & drill-downs
 
-### Requirements
+---
 
-- **Microsoft Power BI Desktop**
-  - Download from the Microsoft Store or from the official Power BI download page.
+### 📁 Repo Contents (clean / demo-ready)
 
-### How to Use
-
-1. **Clone or download this repository**  
-   - If using Git:  
-     ```bash
-     git clone <your-github-repo-url>
-     cd flight_status_dashboard
-     ```
-   - Or download the ZIP from GitHub and extract it.
-
-2. **Open the dashboard in Power BI Desktop**  
-   - Double‑click `Flight Status Dashboard.pbix`, or  
-   - Open Power BI Desktop → `File` → `Open` → select `Flight Status Dashboard.pbix`.
-
-3. **Refresh data (optional)**  
-   - If your `.pbix` is connected to an external data source (e.g., CSV, SQL database, API), go to `Home` → `Transform data` or `Refresh` and update connection details as needed.
-
-4. **Explore the visuals**  
-   - Use the slicers and filters to explore on‑time performance, delays, and cancellations.
-   - Hover over visuals for tooltips and detailed data points.
-
-### Repository Structure
-
-- `Flight Status Dashboard.pbix` – Main Power BI report file.
-- `README.md` – Project documentation (this file).
-
-### Customization
-
-- **Change data source**: Update query connections in Power BI (`Transform data`) to point to your own flight dataset.
-- **Modify visuals**: Add/remove charts, adjust measures, or create new calculated columns and DAX measures as needed.
-- **Branding**: Apply your own theme, colors, and logo to match your style or organization.
-
-### How to Publish This Project to GitHub
-
-From a terminal or PowerShell window, run the following commands in the project directory (`flight_status_dashboard`):
-
-```bash
-cd "C:\Users\dell\Downloads\flight_status_dashboard"
-
-# If this folder is not already a Git repo, initialize it:
-git init
-
-# Add files
-git add README.md "Flight Status Dashboard.pbix"
-
-# Commit your changes
-git commit -m "Add Flight Status Dashboard Power BI project and README"
-
-# Create a new empty repository on GitHub (via the GitHub website), e.g.:
-#   https://github.com/<your-username>/flight_status_dashboard
-
-# Add the GitHub remote (replace <your-username> with your GitHub username)
-git remote add origin https://github.com/<your-username>/flight_status_dashboard.git
-
-# Push the code to GitHub
-git branch -M master
-git push -u origin master
+```text
+flight_status_dashboard/
+├── data/
+│   ├── flights_sample.csv        # 100k row sample for quick demos
+│   ├── airlines.csv              # airline lookup
+│   ├── airports.csv              # airport lookup
+│   └── cancellation_codes.csv    # cancellation reason codes
+├── images/
+│   └── dashboard.png             # screenshot of Power BI Overview
+├── README.md
+└── harsha_theme.json             # (optional) Power BI theme
 ```
 
-After this, your dashboard and README will be available in your GitHub repository.
+---
 
-### License
+### 📦 Full dataset & Power BI file (download)
 
-You can add a license of your choice (for example, MIT) depending on how you want others to use this project.
+The full `flights.csv` (~245 MB) and `Flight Status Dashboard.pbix` (~54 MB) are available here:
 
+- **Google Drive**:  
+  `https://drive.google.com/file/d/1x647AbDpihyrbb_BAQqX9XUj0VD5gUtG/view?usp=drive_link`
 
+**Instructions:** download the ZIP/files from the Drive link and place the full `flights.csv` into the repository `data/` folder if you want to run the full analysis locally:
+
+```text
+<repo_root>/data/flights.csv
+```
+
+Open the `.pbix` file in Power BI Desktop to inspect the complete dashboard.
+
+---
+
+### ▶️ How to run (quick demo using sample)
+
+1. **Clone this repo**:
+
+```bash
+git clone https://github.com/Harshaullikashi/flight_status_dashboard.git
+cd flight_status_dashboard
+```
+
+2. **Open in Power BI (sample or full data)**:
+- Open `Flight Status Dashboard.pbix` (if you downloaded it), **or**
+- In Power BI: `Get data` → `Text/CSV` → select:
+  - `data/flights_sample.csv`
+  - `data/airlines.csv`
+  - `data/airports.csv`
+  - `data/cancellation_codes.csv`
+
+3. **Explore the dashboard**:
+- Use the `Overview` page to explore KPIs and the Actual vs Delay visuals.
+
+---
+
+### 📊 What’s included in the dashboard
+
+- **KPI cards**: Total Flights, On-time %, Avg Arrival Delay, Cancellation Rate
+- **Flight delay trends**: daily/monthly/yearly
+- **Airline & airport performance comparisons**
+- **Cancellation reason breakdown**
+- **Route-level metrics**: origin → destination
