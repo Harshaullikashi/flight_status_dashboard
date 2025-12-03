@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 ## Flight Status & Delay Analysis Dashboard
 
 Power BI • SQL • Data Modeling • DAX • ETL • Visualization
@@ -113,4 +113,4 @@ After downloading, place `flights.csv` in `data/` and open `Flight Status Dashbo
 
 
 
->>>>>>> cfc7f3c39764888e928d5420e15fe27abd11e220
+
