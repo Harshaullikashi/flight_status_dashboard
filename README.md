@@ -78,6 +78,9 @@ cd flight_status_dashboard
 
 ### 📊 What’s included in the dashboard
 
+- **Overview screenshot**  
+  ![Flight Status Dashboard Overview](images/dashboard.png)
+
 - **KPI cards**: Total Flights, On-time %, Avg Arrival Delay, Cancellation Rate
 - **Flight delay trends**: daily/monthly/yearly
 - **Airline & airport performance comparisons**
